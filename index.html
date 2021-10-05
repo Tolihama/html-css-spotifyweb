@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-    <div class="container flex flex-column">
+    <div class="main-container flex flex-column">
         <!-- MAIN -->
         <main class="flex flex-grow-1">
             <!-- ASIDE: LEFT MENU -->
@@ -28,18 +28,53 @@
                 <div class="upgrade">
                     <a href="#">Effettua l'upgrade</a>
                 </div>
-                <nav>
+                <div class="container">
+                    <nav>
+                        <ul class="flex flex-wrap">
+                            <li class="active">
+                                <a href="#">In evidenza</a>
+                            </li>
+                            <li>
+                                <a href="#">Podcast</a>
+                            </li>
+                            <li>
+                                <a href="#">Classifiche</a>
+                            </li>
+                            <li>
+                                <a href="#">Generi e mood</a>
+                            </li>
+                            <li>
+                                <a href="#">Nuove uscite</a>
+                            </li>
+                            <li>
+                                <a href="#">Scopri</a>
+                            </li>
+                        </ul>
 
-                </nav>
-                <section class="recently-played"></section>
-                <section class="suggestion"></section>
-                <section class="popular-artists"></section>
-            </section>
+                    </nav>
+                    <section class="recently-played">
+                        <h2>Recently played</h2>
+                        <div class="card-container flex">
+                            <div class="debug"></div>
+                            <div class="debug"></div>
+                            <div class="debug"></div>
+                            <div class="debug"></div>
+                        </div>
+                    </section>
+                    <section class="suggestion">
+                        <h2>Creato per John Doe</h2>
 
+                    </section>
+                    <section class="popular-artists">
+                        <h2>Artisti più popolari</h2>
+
+                    </section>
+                </section>
+            </div>
         </main>
 
         <!-- FOOTER: MUSIC PLAYER COMANDS -->
-        <footer>
+        <footer class="w100">
             <div class="left"></div>
             <div class="center"></div>
             <div class="right"></div>
