@@ -11,12 +11,18 @@ a {
     text-decoration: none;
 }
 
-/* UTILITIES */
-.main-container {
-    min-height: 100vh;
+ul {
+    list-style: none;
 }
 
+/* UTILITIES */
+.main-container {
+    height: 100vh;
+}
 
+.overflow-y {
+    overflow-y: auto;
+}
 
 /* Flex */
 .flex {
@@ -35,6 +41,10 @@ a {
     flex-wrap: wrap;
 }
 
+.flex-align-items-center {
+    align-items: center;
+}
+
 /* Width */
 .w100 {
     width: 100%;
@@ -42,14 +52,88 @@ a {
 
 /* ASIDE */
 aside {
-    width: 230px; /* TODO: debug! */
+    width: 230px;
     background: #000000;
+}
+
+aside > * {
+    padding: 0 20px;
+}
+
+aside img.logo {
+    width: 80%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+aside li {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+aside li a {
+    display: inline-block;
+    position: relative;
+}
+
+aside li a > * {
+    color: #717171;
+}
+
+aside li a span {
+    color: #717171;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+aside a.icon img {
+    width: 25px;
+    color: #717171;
+}
+
+aside li a.icon span:last-of-type {
+    margin-left: 8px;
+}
+
+aside li:hover a > * {
+    color: #fff;
+}
+
+aside h6 {
+    text-transform: uppercase;
+    font-size: 14px;
+    padding-top: 20px;
+}
+
+aside span.icon {
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-color: #a3a3a3;
+}
+
+aside li:hover span.icon {
+    background-color: #fff;
+}
+
+aside span.icon i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000;
+    font-size: 20px;
+}
+
+aside .new-playlist {
+    font-size: 16px;
 }
 
 /* MAIN SECTION */
 main .main-section {
     background: #141922;
-    overflow-y: auto;
 }
 
 /* Upgrade */
@@ -83,7 +167,6 @@ main .main-section .container {
 /* Nav */
 .main-section nav ul.flex {
     justify-content: center;
-    list-style: none;
 }
 
 .main-section nav li {
