@@ -15,6 +15,10 @@ ul {
     list-style: none;
 }
 
+img {
+    width: 100%;
+}
+
 /* UTILITIES */
 .main-container {
     height: 100vh;
@@ -56,7 +60,9 @@ aside {
     background: #000000;
 }
 
-aside > * {
+aside .top,
+aside .middle a,
+aside .bottom {
     padding: 0 20px;
 }
 
@@ -66,37 +72,36 @@ aside img.logo {
     padding-bottom: 20px;
 }
 
-
-aside li {
+aside li,
+aside .bottom > div {
     padding-top: 8px;
     padding-bottom: 8px;
 }
 
-aside li a {
-    display: inline-block;
-    position: relative;
-}
-
-aside li a > * {
-    color: #717171;
-}
-
-aside li a span {
+aside li span,
+aside .bottom .download-app span {
     color: #717171;
     font-size: 14px;
     font-weight: 700;
 }
 
-aside a.icon img {
+aside a.icon img,
+aside .bottom .download-app img {
     width: 25px;
     color: #717171;
 }
 
-aside li a.icon span:last-of-type {
+aside a.icon span:last-of-type {
     margin-left: 8px;
 }
 
-aside li:hover a > * {
+aside a.active {
+    border-left: 3px solid #adff2f;
+}
+
+aside li:hover a > *,
+aside .download-app a:hover,
+aside li a.active span {
     color: #fff;
 }
 
@@ -129,6 +134,22 @@ aside span.icon i {
 
 aside .new-playlist {
     font-size: 16px;
+}
+
+aside .download-app {
+    border-bottom: 1px solid #717171;
+}
+
+aside .account span {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+aside a.icon img.profile {
+    width: 30px;
+    height: 30px;
+    background: #808080;
+    border-radius: 50%;
 }
 
 /* MAIN SECTION */
@@ -195,6 +216,26 @@ main .main-section .container {
     left: 50%;
     transform: translateX(-50%);
     background: #adff2f;
+}
+
+/* Albums */
+.card-container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.album {
+    width: calc(100% / 6 - 20px);
+    margin: 0 10px;
+    text-align: center;
+}
+
+.album h4 {
+    color: #75777c;
+}
+
+.album-img {
+    width: 100%;
 }
 
 /* FOOTER */
