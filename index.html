@@ -17,9 +17,9 @@
 <body>
     <div class="main-container flex flex-column">
         <!-- MAIN -->
-        <main class="flex flex-grow-1 overflow-y ">
+        <main class="flex flex-grow-1">
             <!-- ASIDE: LEFT MENU -->
-            <aside class="flex flex-column">
+            <aside class="flex flex-column flex-shrink-0">
                 <div class="top">
                     <img class="logo" src="./img/logo.svg" alt="Spotify">
                 </div>
@@ -103,7 +103,7 @@
             </aside>
 
             <!-- MAIN SECTION: NAVBAR, ALBUMS AND OTHER CONTENT -->
-            <section class="main-section flex-grow-1">
+            <section class="main-section flex-grow-1 overflow-y">
                 <div class="upgrade">
                     <a href="#">Effettua l'upgrade</a>
                 </div>
@@ -143,55 +143,83 @@
                             </div>
                             <div class="album">
                                 <div class="album-img">
-                                    <img src="./img/metal_lifting.jpg" alt="Heavy Metal Album">
+                                    <img src="./img/stranger.jpeg" alt="Stranger Things">
                                 </div>
-                                <h3>Heavy Metal</h3>
+                                <h3>Stranger Things, Vol. 1 (a Netflix Original Series Soundtrack)</h3>
+                                <h4>Kyle Dixon & Micheal Stein</h4>
+                            </div>
+                            <div class="album">
+                                <div class="album-img">
+                                    <img src="./img/aquietplace.jpeg" alt="A Quiet Place">
+                                </div>
+                                <h3>A quiet place</h3>
                                 <h4>Subtitle</h4>
                             </div>
                             <div class="album">
                                 <div class="album-img">
-                                    <img src="./img/metal_lifting.jpg" alt="Heavy Metal Album">
+                                    <img src="./img/split.jpeg" alt="Split">
                                 </div>
-                                <h3>Heavy Metal</h3>
+                                <h3>Split</h3>
                                 <h4>Subtitle</h4>
                             </div>
                             <div class="album">
                                 <div class="album-img">
-                                    <img src="./img/metal_lifting.jpg" alt="Heavy Metal Album">
+                                    <img src="./img/cure.jpeg" alt="A cure for wellness">
                                 </div>
-                                <h3>Heavy Metal</h3>
+                                <h3>A cure for wellness</h3>
                                 <h4>Subtitle</h4>
                             </div>
                             <div class="album">
                                 <div class="album-img">
-                                    <img src="./img/metal_lifting.jpg" alt="Heavy Metal Album">
+                                    <img src="./img/sinister.jpeg" alt="Sinister">
                                 </div>
-                                <h3>Heavy Metal</h3>
-                                <h4>Subtitle</h4>
-                            </div>
-                            <div class="album">
-                                <div class="album-img">
-                                    <img src="./img/metal_lifting.jpg" alt="Heavy Metal Album">
-                                </div>
-                                <h3>Heavy Metal</h3>
+                                <h3>Sinister</h3>
                                 <h4>Subtitle</h4>
                             </div>
                         </div>
                     </section>
                     <section class="suggestion">
                         <h2>Creato per John Doe</h2>
-
+                        <h4>Più ascolti, più accurati saranno i suggerimenti</h4>
+                        <div class="card-container flex flex-wrap">
+                            <div class="album">
+                                <div class="album-img">
+                                    <img src="./img/radar.jpeg" alt="Release Radar">
+                                </div>
+                                <h3>Release Radar</h3>
+                            </div>
+                            <div class="album">
+                                <div class="album-img">
+                                    <img src="./img/mixdaily.jpeg" alt="Daily Mix">
+                                </div>
+                                <h3>Daily Mix 1</h3>
+                            </div>
+                        </div>
                     </section>
                     <section class="popular-artists">
                         <h2>Artisti più popolari</h2>
-
+                        <h4>Più ascolti, più accurati saranno i suggerimenti</h4>
+                        <div class="card-container flex flex-wrap circle">
+                            <div class="album">
+                                <div class="album-img">
+                                    <img src="./img/youg.jpeg" alt="Lana del Rey">
+                                </div>
+                                <h3>Lana del Rey</h3>
+                            </div>
+                            <div class="album">
+                                <div class="album-img">
+                                    <img src="./img/einaudi.jpeg" alt="Ludovico Einaudi">
+                                </div>
+                                <h3>Ludovico Einaudi</h3>
+                            </div>
+                        </div>
                     </section>
                 </div>
             </section>
         </main>
 
         <!-- FOOTER: MUSIC PLAYER COMANDS -->
-        <footer class="w100">
+        <footer class="w100 flex-shrink-0">
             <div class="left"></div>
             <div class="center"></div>
             <div class="right"></div>
