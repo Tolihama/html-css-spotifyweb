@@ -285,13 +285,72 @@ main .main-section .container {
 /* FOOTER */
 footer {
     height: 90px;
+    padding: 5px 10px;
     background: #282828;
+    justify-content: space-between;
+    text-align: center;
 }
 
-/* TODO: DEBUG */
-.debug {
-    width: 100px;
-    height: 100px;
-    background: red;
-    border: 1px solid white;
+footer .current-img img {
+    width: 40px;
+    height: 40px;
 }
+
+footer .current-info {
+    margin: 0 40px 0 15px;
+}
+
+footer .current-info span {
+    display: block;
+    text-align: left;
+}
+
+footer .current-info .current-album {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+footer .current-info .current-track {
+    font-size: 12px;
+    font-weight: 500;
+    color: #777777;
+}
+
+footer .center .top i {
+    font-size: 20px;
+    margin: 0 20px 10px;
+    vertical-align: middle;
+}
+
+footer .center .top i.fa-play-circle {
+    font-size: 30px;
+}
+
+footer .center .bottom > * {
+    margin: 0 20px;
+}
+
+/* Progress Bar */
+.progress-bar {
+    width: 300px;
+    height: 3px;
+    border-radius: 6px;
+    background-color: #5a5a5a;
+}
+
+.bar {
+    height: 100%;
+    background-color: #c1c1c1;
+}
+
+.timer {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.w20 {
+    width: 20%;
+}
+
+
+
