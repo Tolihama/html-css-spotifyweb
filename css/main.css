@@ -5,3 +5,38 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
+
+/* UTILITIES */
+.container {
+    min-height: 100vh;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-grow-1 {
+    flex-grow: 1;
+}
+
+/* ASIDE */
+aside {
+    width: 230px; /* TODO: debug! */
+    background: #000000;
+}
+
+/* MAIN SECTION */
+main .main-section {
+    background: #141922;
+}
+
+/* FOOTER */
+footer {
+    width: 100%;
+    height: 90px;
+    background: #282828;
+}
