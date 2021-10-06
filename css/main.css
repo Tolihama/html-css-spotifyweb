@@ -72,7 +72,7 @@ aside {
 aside .top,
 aside .middle a,
 aside .bottom {
-    padding: 0 20px;
+    padding: 0 20px 0 17px;
 }
 
 aside img.logo {
@@ -100,7 +100,7 @@ aside .bottom .download-app img {
     color: #717171;
 }
 
-aside a.icon span:last-of-type {
+aside .icon span:last-of-type {
     margin-left: 8px;
 }
 
@@ -108,8 +108,12 @@ aside a.active {
     border-left: 3px solid #adff2f;
 }
 
+aside a {
+    border-left: 3px solid transparent;
+}
+
 aside li:hover a > *,
-aside .download-app a:hover,
+aside .download-app a:hover span,
 aside li a.active span {
     color: #fff;
 }
@@ -154,7 +158,7 @@ aside .account span {
     font-weight: 700;
 }
 
-aside a.icon img.profile {
+aside .icon img.profile {
     width: 30px;
     height: 30px;
     background: #808080;
@@ -316,6 +320,11 @@ footer .current-info .current-track {
     color: #777777;
 }
 
+footer .left i {
+    margin-right: 15px;
+    color: #878787;
+}
+
 footer .center .top i {
     font-size: 20px;
     margin: 0 20px 10px;
@@ -326,21 +335,45 @@ footer .center .top i.fa-play-circle {
     font-size: 30px;
 }
 
+footer .center .top i.fa-play-circle:hover {
+    transform: scale(110%);
+}
+
 footer .center .bottom > * {
     margin: 0 20px;
 }
 
+footer .right i {
+    margin-right: 20px;
+}
+
 /* Progress Bar */
 .progress-bar {
-    width: 300px;
     height: 3px;
     border-radius: 6px;
     background-color: #5a5a5a;
 }
 
 .bar {
+    position: relative;
     height: 100%;
     background-color: #c1c1c1;
+}
+
+.progress-bar:hover .bar {
+    background-color: #adff2f;
+}
+
+.progress-bar:hover .bar::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    right: 0;
+    transform: translateY(-40%);
+    border-radius: 50%;
+    background-color: #fff;
 }
 
 .timer {
