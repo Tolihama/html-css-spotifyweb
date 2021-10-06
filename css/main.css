@@ -49,6 +49,10 @@ img {
     flex-wrap: wrap;
 }
 
+.flex-justify-content-center {
+    justify-content: center;
+}
+
 .flex-align-items-center {
     align-items: center;
 }
@@ -60,7 +64,7 @@ img {
 
 /* MAIN */
 main {
-    max-height: calc(100vh - 90px);
+    overflow: hidden;
 }
 
 /* ASIDE */
@@ -69,8 +73,9 @@ aside {
     background: #000000;
 }
 
-aside .top,
+aside .top img,
 aside .middle a,
+aside h6,
 aside .bottom {
     padding: 0 20px 0 17px;
 }
@@ -79,6 +84,13 @@ aside img.logo {
     width: 80%;
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+aside img.logo-small {
+    display: none;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 4px;
 }
 
 aside li,
@@ -96,8 +108,15 @@ aside .bottom .download-app span {
 
 aside a.icon img,
 aside .bottom .download-app img {
+    filter: invert(.3);
+}
+
+aside a.icon img {
     width: 25px;
-    color: #717171;
+}
+
+aside .bottom .download-app img {
+    width: 20px;
 }
 
 aside .icon span:last-of-type {
@@ -116,6 +135,12 @@ aside li:hover a > *,
 aside .download-app a:hover span,
 aside li a.active span {
     color: #fff;
+}
+
+aside li:hover img,
+aside .download-app a:hover img,
+aside li a.active img {
+    filter: invert(0);
 }
 
 aside h6 {
@@ -243,14 +268,9 @@ main .main-section .container {
 }
 
 /* Albums */
-.card-container {
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
 .album {
-    width: calc(100% / 6 - 20px); /* TODO: proprietà chiave per i media query */
-    margin-right: 20px;
+    width: calc(100% / 6 - 20px);
+    margin: 30px 20px 30px 0;
     text-align: center;
 }
 
@@ -287,64 +307,72 @@ main .main-section .container {
 }
 
 /* FOOTER */
-footer {
-    height: 90px;
+footer.app-player {
     padding: 5px 10px;
     background: #282828;
-    justify-content: space-between;
     text-align: center;
 }
 
-footer .current-img img {
+footer.app-player .current-img img {
     width: 40px;
     height: 40px;
 }
 
-footer .current-info {
+footer.app-player .current-info {
     margin: 0 40px 0 15px;
 }
 
-footer .current-info span {
+footer.app-player .current-info span {
     display: block;
     text-align: left;
 }
 
-footer .current-info .current-album {
+footer.app-player .current-info .current-album {
     font-size: 13px;
     font-weight: 600;
 }
 
-footer .current-info .current-track {
+footer.app-player .current-info .current-track {
     font-size: 12px;
     font-weight: 500;
     color: #777777;
 }
 
-footer .left i {
+footer.app-player .left i {
     margin-right: 15px;
     color: #878787;
 }
 
-footer .center .top i {
+footer.app-player .center .top i {
     font-size: 20px;
-    margin: 0 20px 10px;
+    margin: 0 20px;
     vertical-align: middle;
 }
 
-footer .center .top i.fa-play-circle {
+footer.app-player .center .top i.fa-play-circle {
     font-size: 30px;
 }
 
-footer .center .top i.fa-play-circle:hover {
-    transform: scale(110%);
+footer.app-player .center .top i.fa-play-circle:hover {
+    transform: scale(120%);
 }
 
-footer .center .bottom > * {
+footer.app-player .center .bottom > * {
     margin: 0 20px;
 }
 
-footer .right i {
+footer.app-player .right {
+    max-width: 20%;
+}
+
+footer.app-player .right i {
     margin-right: 20px;
+}
+
+footer.app-player .center > *,
+footer.app-player .right > * {
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 /* Progress Bar */
@@ -381,9 +409,83 @@ footer .right i {
     font-weight: 600;
 }
 
+.progress-bar.timing {
+    width: 40%;
+}
+
+.progress-bar.volume {
+    width: 100px;
+}
+
 .w20 {
     width: 20%;
 }
 
 
+/* -------------------------
+RESPONSIVE
+------------------------- */
+@media screen and (max-width: 1200px) {
+    .album {
+        width: calc(100% / 4 - 20px);
+    }
 
+    .album h3,
+    .album h4 {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .album {
+        width: calc(100% / 2 - 20px);
+    }
+
+    .album h3,
+    .album h4 {
+        font-size: 0.9rem;
+    }
+
+    footer.app-player .center .top i {
+        font-size: 14px;
+        margin: 0 10px 5px;
+        vertical-align: middle;
+    }
+    
+    footer.app-player .center .top i.fa-play-circle {
+        font-size: 20px;
+    }
+
+    footer.app-player .center .bottom > * {
+        margin: 0 5px;
+    }
+
+    .progress-bar.volume {
+        width: 50px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    aside {
+        width: auto;
+    }
+
+    .upgrade {
+        width: 100%;
+    }
+
+    aside img.logo,
+    aside span,
+    aside .playlist,
+    footer.app-player .current-info {
+        display: none;
+    }
+    
+    aside img.logo-small {
+        display: inline-block;
+    }
+
+    footer.app-player .album-options {
+        margin-left: 15px;
+    }
+}

@@ -22,6 +22,7 @@
             <aside class="flex flex-column flex-shrink-0">
                 <div class="top">
                     <img class="logo" src="./img/logo.svg" alt="Spotify">
+                    <img class="logo-small" src="./img/logo-small.svg" alt="Spotify">
                 </div>
                 <div class="middle flex-grow-1 overflow-y">
                     <ul>
@@ -44,47 +45,49 @@
                             </a>
                         </li>
                     </ul>
-                    <h6>Playlist</h6>
-                    <ul>
-                        <li>
-                            <a href="#" class="icon flex flex-align-items-center">
-                                <span class="icon">
-                                    <i class="fas fa-plus"></i>
-                                </span>
-                                <span class="new-playlist">Crea Playlist</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span>Nome Playlist</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span>Nome Playlist</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span>Nome Playlist</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span>Nome Playlist</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span>Nome Playlist</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span>Nome Playlist</span>
-                            </a>
-                        </li>
-                    </ul>
+                    <div class="playlist">
+                        <h6>Playlist</h6>
+                        <ul>
+                            <li>
+                                <a href="#" class="icon flex flex-align-items-center">
+                                    <span class="icon">
+                                        <i class="fas fa-plus"></i>
+                                    </span>
+                                    <span class="new-playlist">Crea Playlist</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Nome Playlist</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Nome Playlist</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Nome Playlist</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Nome Playlist</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Nome Playlist</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Nome Playlist</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="bottom">
                     <div class="download-app">
@@ -217,8 +220,8 @@
         </main>
 
         <!-- FOOTER: MUSIC PLAYER COMANDS -->
-        <footer class="w100 flex flex-shrink-0 flex-align-items-center">
-            <div class="left flex flex-align-items-center">
+        <footer class="app-player w100 flex flex-shrink-0 flex-justify-content-center flex-align-items-center">
+            <div class="left flex flex-wrap flex-align-items-center">
                 <div class="current-img">
                     <img src="./img/sinister.jpeg" alt="Sinister">
                 </div>
@@ -226,10 +229,12 @@
                     <span class="current-album">Sinister</span>
                     <span class="current-track">Brano Nome</span>
                 </div>
-                <i class="far fa-heart"></i>
-                <i class="far fa-folder"></i>
+                <div class="album-options flex flex-wrap">
+                    <i class="far fa-heart"></i>
+                    <i class="far fa-folder"></i>
+                </div>
             </div>
-            <div class="center flex flex-column">
+            <div class="center flex flex-column flex-grow-1">
                 <div class="top">
                     <i class="fas fa-random"></i>
                     <i class="fas fa-step-backward"></i>
@@ -237,20 +242,22 @@
                     <i class="fas fa-step-forward"></i>
                     <i class="fas fa-redo"></i>
                 </div>
-                <div class="bottom flex flex-align-items-center">
+                <div class="bottom flex flex-justify-content-center flex-align-items-center">
                     <span class="timer">0:25</span>
-                    <div class="progress-bar" style="width: 400px;">
+                    <div class="progress-bar timing">
                         <div class="bar w20"></div>
                     </div>
                     <span class="timer">4:35</span>
                 </div>
             </div>
-            <div class="right flex flex-align-items-center">
+            <div class="right flex flex-wrap flex-justify-content-center flex-align-items-center">
                 <i class="fas fa-list"></i>
                 <i class="fas fa-desktop"></i>
-                <i class="fas fa-volume-up"></i>
-                <div class="progress-bar" style="width: 100px;">
-                    <div class="bar w20"></div>
+                <div class="flex flex-align-items-center">
+                    <i class="fas fa-volume-up"></i>
+                    <div class="progress-bar volume">
+                        <div class="bar w20"></div>
+                    </div>
                 </div>
             </div>
         </footer>
